@@ -1,0 +1,25 @@
+POST http://localhost:3000/categorie/add
+Content-Type: application/json
+
+
+{
+     
+    "name": "ddddd"
+    
+
+}
+##########
+GET http://localhost:3000/user/profile/5fb974591ec84017c43ef029
+
+#######
+
+POST http://localhost:3000/api/singup
+Content-Type: application/json
+
+
+{
+     "name": "ali",
+    "email": "ali@gmail.com",
+    "password": "123456"
+
+}

@@ -1,0 +1,82 @@
+
+<div class="container" *ngIf="x">
+  <form #f="ngForm" (ngSubmit)="add(f.value)">
+    <div class="form-group">
+      nom:
+      <input
+        [(ngModel)]="candidat.name"
+        name="nom"
+        type="text"
+        class="form-control"
+      />
+      prenom:
+      <input
+        [(ngModel)]="candidat.prenom"
+        name="prenom"
+        type="text"
+        class="form-control"
+      />
+      email:
+      <input
+        [(ngModel)]="candidat.email"
+        name="email"
+        type="email"
+        class="form-control"
+      />
+      
+      password:
+      <input
+        [(ngModel)]="candidatE.password"
+        name="password "
+        type=" password"
+        class="form-control"
+      />
+      
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+    <button class="btn btn-warning" (click)="rec()">registerRecruteur</button>
+  </form>
+</div>
+<div class="container" *ngIf="!x">
+  <form #f="ngForm" (ngSubmit)="addR(f.value)">
+    <div class="form-group">
+      nom:
+      <input
+        [(ngModel)]="candidatE.name"
+        name="nom"
+        type="text"
+        class="form-control"
+      />
+      prenom:
+      <input
+        [(ngModel)]="recruteur.prenom"
+        name="prenom"
+        type="text"
+        class="form-control"
+      />
+      email:
+      <input
+        [(ngModel)]="recruteur.email"
+        name="email"
+        type="email"
+        class="form-control"
+      />
+      nomEntreprise:
+      <input
+        [(ngModel)]="recruteur.Nom_Entreprise"
+        name="email"
+        type="text"
+        class="form-control"
+      />
+
+      password:
+      <input
+        type=" password"
+        [(ngModel)]="candidatE.password"
+        name="password "
+        class="form-control"
+      />
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
